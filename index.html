@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Progress Tracker</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <!-- Dashboard View -->
+        <div id="dashboard" class="dashboard">
+            <header>
+                <h1>E-Learning Progress Tracker</h1>
+                <p class="subtitle">Monitor your progress in online courses</p>
+            </header>
+
+            <div class="stats-grid" id="statsGrid"></div>
+            <div class="courses-grid" id="coursesGrid"></div>
+        </div>
+
+        <!-- Course Detail View -->
+        <div id="courseDetail" class="course-detail">
+            <button class="back-btn" onclick="showDashboard()">
+                ← Back to Dashboard
+            </button>
+            <h2 id="detailTitle"></h2>
+            <p id="detailDescription" style="color: #666; margin-bottom: 30px;"></p>
+            
+            <div class="course-content">
+                <div>
+                    <div class="video-container" id="videoPlayer">
+                        <iframe id="videoFrame" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="lesson-info">
+                        <h3 id="currentLessonTitle"></h3>
+                        <p id="currentLessonDescription" style="color: #666; margin-top: 10px;"></p>
+                    </div>
+                </div>
+                <div class="lessons-list">
+                    <h3 style="margin-bottom: 15px;">Course Content</h3>
+                    <div id="lessonsList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
